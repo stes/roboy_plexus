@@ -232,13 +232,13 @@ void MyoControl::getDefaultControlParams(control_Parameters_t *params, int contr
 
     switch (control_mode) {
         case POSITION:
-//            params->outputPosMax = 4000;
-//            params->outputNegMax = -4000;
+            params->outputPosMax = 300;
+            params->outputNegMax = -300;
             params->spPosMax = 10000000;
             params->spNegMax = -10000000;
             params->Kp = 1;
             params->Ki = 0;
-            params->Kd = 0;
+            params->Kd = 1;
             params->forwardGain = 0;
             params->deadBand = 0;
             params->IntegralPosMax = 100;
